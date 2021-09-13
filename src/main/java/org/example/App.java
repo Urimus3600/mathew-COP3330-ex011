@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class App 
 {
-    public static double roundMoney(double raw){
-        return Math.round(raw*100)/100.0;
+    public static double ceilMoney(double raw){
+        return Math.ceil(raw*100)/100.0;
     }
 
     public static void main( String[] args )
@@ -21,7 +21,7 @@ public class App
         System.out.print( "What is the exchange rate? " );
         double rate = input.nextDouble();
 
-        double $ = roundMoney(euro * rate);
+        double $ = ceilMoney(euro * rate);
 
         System.out.print(euro + " euros at an exchange rate of " + rate +
                 " is\n" + $ + " U.S. dollars.");
